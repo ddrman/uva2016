@@ -1,16 +1,28 @@
 
-<div class="forms form small-11 small-centered columns content">
+<div class="forms form small-7 small-centered columns content">
     <?= $this->Form->create($form) ?>
     <fieldset>
-        <legend><?= __('Add Form') ?></legend>
+        <legend><?= __('Formulario UVA 2016') ?></legend>
         <?php
             echo $this->Form->input('Nombre:');
             echo $this->Form->input('Apellidos:');
-            echo $this->Form->input('Tipo de documento:');
+            
+            $tipdoc = [
+                        [ 'text' => 'DNI', 'value' => '1', 'attr_name' => 'DNI' ],
+                        [ 'text' => 'NIE', 'value' => '2', 'attr_name' => 'NIE' ],
+                        [ 'text' => 'PASAPORTE', 'value' => '3', 'other_attr_name' => 'PASAPORTE' ],
+                        ];
+            echo $this->Form->select('Tipo de documento:', $tipdoc);
             echo $this->Form->input('Documento de identidad:');
-            echo $this->Form->input('Correo Electrónico:');
-            echo $this->Form->input('Sexo:');
-            echo $this->Form->input('Fecha de Nacimiento:');
+            echo $this->Form->input('email', ['label' =>'Correo electrónico:']);
+            
+            $sexo = [
+                        [ 'text' => 'HOMBRE', 'value' => '1', 'attr_name' => 'HOMBRE' ],
+                        [ 'text' => 'MUJER', 'value' => '2', 'attr_name' => 'MUJER' ],
+                    ];
+
+            echo $this->Form->select('Sexo:', $sexo);
+            echo $this->Form->input('fecha', ['label' =>'Fecha de Nacimiento:']);
             echo $this->Form->input('Teléfono Móvil:');
             echo $this->Form->input('Teléfono Fijo:');
             echo $this->Form->input('Dirección:');
