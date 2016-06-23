@@ -63,6 +63,13 @@ use Cake\Network\Request;
 use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
+use Cake\I18n\I18n;
+use Cake\I18n\Time;
+use Cake\I18n\Number;
+
+I18n::locale('es-ES');
+
+
 
 /**
  * Read configuration file and inject configuration into various
@@ -204,6 +211,7 @@ if (Configure::read('debug')) {
 DispatcherFactory::add('Asset');
 DispatcherFactory::add('Routing');
 DispatcherFactory::add('ControllerFactory');
+DispatcherFactory::add('LocaleSelector', ['locales' => ['es_ES', 'es_ES']]);
 
 /**
  * Enable immutable time objects in the ORM.
@@ -215,7 +223,7 @@ DispatcherFactory::add('ControllerFactory');
  */
 Type::build('time')
     ->useImmutable();
-Type::build('date')
-    ->useImmutable();
-Type::build('datetime')
-    ->useImmutable();
+Type::build('date')->useLocaleParser()->setLocaleFormat('dd-M-YYYY');
+Type::build('datetime')->useLocaleParser()->setLocaleFormat('dd-M-y HH-mm');
+
+Plugin::load('Cake/Localized');
