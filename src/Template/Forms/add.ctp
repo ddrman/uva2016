@@ -24,7 +24,9 @@
                     ];
 
             echo $this->Form->select('Sexo:', $sexo);
-            echo $this->Form->input('fecha', ['label' =>'Fecha de Nacimiento:', 'format' => 'd-m-Y']);
+            echo $this->Form->input('fecha', ['label' =>'Fecha de Nacimiento:','minYear' => date('Y') - 50, 'format' => 'dd-mm-YYYY',
+                        
+                ]);
             echo $this->Form->input('telefonomov', ['label' =>'Teléfono Móvil']);
             echo $this->Form->input('telefonofij', ['label' =>'Teléfono Fijo']);
             echo $this->Form->input('direccion', ['label' =>'Dirección:']);
