@@ -1,7 +1,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Form'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Nuevo Formulario'), ['action' => 'add'],['class' => 'btn btn-success']) ?></li>
     </ul>
 </nav>
 <div class="forms index large-9 medium-8 columns content">
@@ -13,6 +13,11 @@
         ['class' => 'btn btn-success']) 
     ?>
     <table cellpadding="0" cellspacing="0">
+
+<div class="table-responsive">
+    <h3><?= __('Formulario') ?></h3>
+    <table class="table">
+
         <thead>
             <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
