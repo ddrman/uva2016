@@ -227,3 +227,4 @@ Type::build('date')->useLocaleParser()->setLocaleFormat('dd-M-YYYY');
 Type::build('datetime')->useLocaleParser()->setLocaleFormat('dd-M-y HH-mm');
 
 Plugin::load('Cake/Localized');
+Plugin::load('CsvView');

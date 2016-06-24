@@ -5,7 +5,13 @@
     </ul>
 </nav>
 <div class="forms index large-9 medium-8 columns content">
-    <h3><?= __('Formulario') ?></h3>
+        <h3><?= __('Formulario') ?></h3>
+        <?= $this->Html->link('Exportar a CSV', [
+        'controller' => 'forms', 
+        'action' => 'export',
+        '_ext' => 'csv',],
+        ['class' => 'btn btn-success']) 
+    ?>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>

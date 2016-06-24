@@ -105,4 +105,14 @@ class FormsController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+
+        //Función par axportar en excel
+    public function export() {
+        $this->response->download('export.csv');
+        $data = $this->Forms->find('all')->toArray();
+        $_serialize = 'data';
+        $this->set(compact('data', '_serialize'));
+        $this->viewBuilder()->className('CsvView.Csv');
+        return;
+    }
 }
