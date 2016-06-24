@@ -26,23 +26,33 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
-
+    <?= $this->Html->css(['bootstrap.min', 'bootstrap-theme.min','estilo','jquery-ui','jquery-ui.structure','jquery-ui.theme.min']); ?>
+    <?= $this->Html->script(['bootstrap.min','npm','jquery-3.0.0.min','jquery-ui.min']); ?>
+    
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <ul class="nav nav-pills">
+              <li role="presentation" class="active"><a href="#">Home</a></li>
+              <li role="presentation"><a href="http://uva2016.arenages.com">Matriculación</a></li>
+              <!-- <li role="presentation"><a href="#">Messages</a></li> -->
+            </ul>
+        </div>
     </nav>
+
+    <div class="logo">
+
+        <img src="img/Cabcera_arena_UVA16.jpg" class="img-responsive" alt="UVA-2016">
+
+    </div>
+    
     <?= $this->Flash->render() ?>
-    <div class="container clearfix">
+    <div class="container clearfix cabecera">
         <?= $this->fetch('content') ?>
     </div>
     <footer>

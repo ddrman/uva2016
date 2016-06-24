@@ -58,7 +58,17 @@ class FormsTable extends Table
 
         $validator
             ->requirePresence('doc', 'create')
-            ->notEmpty('doc');
+            ->notEmpty('doc')
+            ->add('doc', [
+                    'length' => [
+                        'rule' => ['minLength', 9],
+                        'message' => 'Necesita mínimo 9 caracteres',
+                    ],
+                    'maxLength' => [
+                        'rule' => ['maxLength', 9],
+                        'message' => 'No puede tener más de 9 caracteres'
+                    ]
+                ]);
 
         $validator
             ->email('email')

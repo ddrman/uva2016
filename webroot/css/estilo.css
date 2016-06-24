@@ -1,0 +1,18 @@
+.cabecera{
+	margin-top: 3%;
+}
+
+div{
+	padding: 1% 0;
+}
+.error-message{
+	margin: 10px 0;
+	background-color: #f67a7a;
+	padding: 10px;
+	border-radius:5px; 
+}
+
+.logo{
+	display:flex;justify-content:center;
+	align-items:center;
+}
