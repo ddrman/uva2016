@@ -38,7 +38,7 @@ $cakeDescription = 'Formulario de Registro UVA 2016';
     <nav class="navbar navbar-default">
         <div class="container">
             <ul class="nav nav-pills">
-              <li role="presentation" class="active"><a href="#">Home</a></li>
+              <li role="presentation" class="active"><a href="http://uva.adeje.es">Home</a></li>
               <li role="presentation"><a href="http://uva2016.arenages.com">Matriculación</a></li>
               <!-- <li role="presentation"><a href="#">Messages</a></li> -->
             </ul>
@@ -47,7 +47,7 @@ $cakeDescription = 'Formulario de Registro UVA 2016';
 
     <div class="logo">
 
-        <img src="img/Cabcera_arena_UVA16.jpg" class="img-responsive" alt="UVA-2016">
+       <?= $this->Html->image('Cabcera_arena_UVA16.jpg', ['alt' => 'UVA2016'])?>
 
     </div>
     
