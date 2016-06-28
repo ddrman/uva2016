@@ -61,6 +61,6 @@
             echo $this->Form->input('lugar_trabajo', ['label' =>'Lugar de trabajo:(*)', 'class' => 'form-control']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit'),['class' => 'btn btn-primary']) ?>
+    <?= $this->Form->button(__('Enviar'),['class' => 'btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>
