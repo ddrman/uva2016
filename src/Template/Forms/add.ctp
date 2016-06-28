@@ -1,16 +1,9 @@
 
 <div class="forms form small-7 small-centered columns content">
-    <script>
-  $(function() {
-    $( "#datepicker" ).datepicker({
-          changeMonth: true,
-          changeYear: true  
-        });
-  });
-  </script>
+
 
     <?= $this->Form->create($form) ?>
-    <form>
+    <fieldset>
         <h1><?= __('Formulario UVA 2016') ?></h1>
         <?php
             echo $this->Form->input('nombre', ['label' =>'Nombre:(*)', 'class' => 'form-control']);
@@ -67,7 +60,7 @@
             echo $this->Form->input('profesion', ['label' =>'Profesión Actual:(*)', 'class' => 'form-control']);
             echo $this->Form->input('lugar_trabajo', ['label' =>'Lugar de trabajo:(*)', 'class' => 'form-control']);
         ?>
-    </form>
-    <?= $this->Form->button(__('Enviar'),['class'=>'btn btn-primary btn-lg']) ?>
+    </fieldset>
+    <?= $this->Form->button(__('Submit'),['class' => 'btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>
