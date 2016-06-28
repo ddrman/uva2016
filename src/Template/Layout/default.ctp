@@ -45,7 +45,7 @@ $cakeDescription = 'Formulario de Registro UVA 2016';
 
     <div class="logo">
 
-       <?= $this->Html->image('Cabcera_arena_UVA16.jpg', ['alt' => 'UVA2016'])?>
+       <?= $this->Html->image('Cabcera_arena_UVA16.jpg', ['alt' => 'UVA2016', 'class' =>'img-responsive'])?>
 
     </div>
     
