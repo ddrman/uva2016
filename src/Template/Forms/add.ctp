@@ -19,13 +19,8 @@
             echo $this->Form->input('doc', ['label' =>'Documento de identidad:(*)', 'class' => 'form-control']);
             echo $this->Form->input('email', ['label' =>'Correo electrónico:(*)', 'class' => 'form-control']);
             
-            echo $this->Form->label('sexo', ['label' =>'Sexo:(*)']);
-            $sexo = [
-                        [ 'text' => 'HOMBRE', 'value' => '1', 'attr_name' => 'HOMBRE' ],
-                        [ 'text' => 'MUJER', 'value' => '2', 'attr_name' => 'MUJER' ],
-                    ];
 
-            echo $this->Form->select('Sexo:', $sexo,['class' => 'form-control'] );
+            echo $this->Form->input('sexo',['label' =>'Sexo:(*)', 'class' => 'form-control'] );
             echo $this->Form->input('fecha', ['label' =>'Fecha de Nacimiento:(*)','minYear' => date('Y') - 90, 'format' => 'dd-mm-YYYY',
                 ]);
 
@@ -35,23 +30,8 @@
             echo $this->Form->input('localidad', ['label' =>'Localidad:(*)', 'class' => 'form-control']);
             echo $this->Form->input('cod_postal', ['label' =>'Código Postal:(*)', 'class' => 'form-control']);
             echo $this->Form->input('nacionalidad', ['label' =>'Nacionalidad:', 'class' => 'form-control']);
-            $nivel = [
-                        [ 'text' => 'Primaria', 'value' => '1', 'attr_name' => 'Primaria' ],
-                        [ 'text' => 'Secundaria', 'value' => '2', 'attr_name' => 'Secundaria' ],
-                        [ 'text' => 'Bachillerato', 'value' => '3', 'other_attr_name' => 'Bachillerato' ],
-                        [ 'text' => 'Diplomado', 'value' => '3', 'other_attr_name' => 'Diplomado' ],
-                        [ 'text' => 'Ingeniero técnico', 'value' => '3', 'other_attr_name' => 'Ingeniero técnico' ],
-                        [ 'text' => 'Arquitecto técnico', 'value' => '3', 'other_attr_name' => 'Arquitecto técnico' ],
-                        [ 'text' => 'Licenciado', 'value' => '3', 'other_attr_name' => 'Licenciado' ],
-                        [ 'text' => 'Ingeniero', 'value' => '3', 'other_attr_name' => 'Ingeniero' ],
-                        [ 'text' => 'Arquitecto', 'value' => '3', 'other_attr_name' => 'Arquitecto' ],
-                        [ 'text' => 'Doctor', 'value' => '3', 'other_attr_name' => 'Doctor' ],
-                        [ 'text' => 'Ciclo Grado Medio', 'value' => '3', 'other_attr_name' => 'Ciclo Grado Medio' ],
-                        [ 'text' => 'Ciclo Grado Superior', 'value' => '3', 'other_attr_name' => 'Ciclo Grado Superior' ],
-
-                        ];
-            echo $this->Form->label('nivel_estudios', ['label' =>'Nivel de estudios:(*)']);               
-            echo $this->Form->select('nivel_estudios', $nivel, ['class' => 'form-control']);
+                  
+            echo $this->Form->input('nivel_estudios',['label' =>'Nivel de estudios:(*)','class' => 'form-control']);
             echo $this->Form->input('estud_cursa', ['label' =>'Estudios que cursa actualmente:', 'class' => 'form-control']);
             echo $this->Form->input('centro_estud', ['label' =>'Centro de estudios en el que cursa:', 'class' => 'form-control']);
             echo $this->Form->input('idiomas', ['label' =>'Idiomas que habla:', 'class' => 'form-control']);

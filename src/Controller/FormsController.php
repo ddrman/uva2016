@@ -52,10 +52,10 @@ class FormsController extends AppController
         if ($this->request->is('post')) {
             $form = $this->Forms->patchEntity($form, $this->request->data);
             if ($this->Forms->save($form)) {
-                $this->Flash->success(__('The form has been saved.'));
-                return $this->redirect(['action' => 'index']);
+                $this->Flash->success(__('El formulario ha sido guardado'));
+                return $this->redirect(['controller' => 'Forms', 'action' => 'add', 'home']);
             } else {
-                $this->Flash->error(__('The form could not be saved. Please, try again.'));
+                $this->Flash->error(__('El formulario no ha podido ser guardado, inténtalo de nuevo'));
             }
         }
         $this->set(compact('form'));
