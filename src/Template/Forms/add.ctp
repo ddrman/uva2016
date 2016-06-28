@@ -20,7 +20,9 @@
             echo $this->Form->input('email', ['label' =>'Correo electrónico:(*)', 'class' => 'form-control']);
             
 
-            echo $this->Form->input('sexo',['label' =>'Sexo:(*)', 'class' => 'form-control'] );
+            echo $this->Form->label('sexo', ['label' =>'Sexo:(*)']);
+            echo $this->Form->select('sexo',['Hombre','Mujer'],
+                                        ['empty' => '(Elige una)','class' => 'form-control']);
             echo $this->Form->input('fecha', ['label' =>'Fecha de Nacimiento:(*)','minYear' => date('Y') - 90, 'format' => 'dd-mm-YYYY',
                 ]);
 
@@ -30,8 +32,9 @@
             echo $this->Form->input('localidad', ['label' =>'Localidad:(*)', 'class' => 'form-control']);
             echo $this->Form->input('cod_postal', ['label' =>'Código Postal:(*)', 'class' => 'form-control']);
             echo $this->Form->input('nacionalidad', ['label' =>'Nacionalidad:', 'class' => 'form-control']);
-                  
-            echo $this->Form->input('nivel_estudios',['label' =>'Nivel de estudios:(*)','class' => 'form-control']);
+            echo $this->Form->label('nivel_estudios', ['label' =>'Nivel de Estudios:(*)']);
+            echo $this->Form->select('nivel_estudios',['Primaria','Secundaria' , 'Bacillerato', 'Diplomado', 'Ingeniero','Ingeniero Técnico','Arquitecto','Arquitecto Técnico','Licenciado','Ciclo Grado Medio','Ciclo Grado Superior'],
+                                        ['empty' => '(Elige una)','class' => 'form-control']);
             echo $this->Form->input('estud_cursa', ['label' =>'Estudios que cursa actualmente:', 'class' => 'form-control']);
             echo $this->Form->input('centro_estud', ['label' =>'Centro de estudios en el que cursa:', 'class' => 'form-control']);
             echo $this->Form->input('idiomas', ['label' =>'Idiomas que habla:', 'class' => 'form-control']);
