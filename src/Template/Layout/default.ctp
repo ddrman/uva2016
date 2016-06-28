@@ -26,7 +26,7 @@ $cakeDescription = 'Formulario de Registro UVA 2016';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css(['bake.css','cake.css','bootstrap.min', 'bootstrap-theme.min','estilo']); ?>
+    <?= $this->Html->css(['bootstrap.min', 'bootstrap-theme.min','estilo']); ?>
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
