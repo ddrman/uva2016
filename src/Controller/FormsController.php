@@ -111,7 +111,8 @@ class FormsController extends AppController
         $this->response->download('export.csv');
         $data = $this->Forms->find('all')->toArray();
         $_serialize = 'data';
-        $this->set(compact('data', '_serialize'));
+        $_delimiter = chr(9);
+        $this->set(compact('data', '_serialize', '_delimiter'));
         $this->viewBuilder()->className('CsvView.Csv');
         return;
     }
