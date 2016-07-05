@@ -113,14 +113,13 @@ class FormsController extends AppController
         $_serialize = 'data';
         $_delimiter = chr(9);
         $_enclosure = '"';
-        $_newline = '\r\n';
-        $_eol = '~';
+        $_newline = '\n';
         $_bom = true;
         $_extract = ['id', 'nombre', 'apellidos', 'tipo_doc', 'doc', 'email', 'sexo', 'fecha',
         'telefonomov', 'telefnofij', 'direccion', 'localidad', 'cod_postal', 'nacionalidad',
         'nivel_estudios', 'estud_cursa', 'centro_estud', 'idiomas', 'estud_reali', 'centro_estud_reali',
         'profesion', 'lugar_trabajo'];
-        $this->set(compact('data', '_serialize', '_delimiter', '_enclosure', '_newline', '_eol', '_bom','_extract'));
+        $this->set(compact('data', '_serialize', '_delimiter', '_enclosure', '_newline', '_bom','_extract'));
         $this->viewBuilder()->className('CsvView.Csv');
         return;
     }
