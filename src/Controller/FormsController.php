@@ -112,7 +112,11 @@ class FormsController extends AppController
         $data = $this->Forms->find('all')->toArray();
         $_serialize = 'data';
         $_delimiter = chr(9);
-        $this->set(compact('data', '_serialize', '_delimiter'));
+        $_extract = ['id', 'nombre', 'apellidos', 'tipo_doc', 'doc', 'email', 'sexo', 'fecha',
+        'telefonomov', 'telefnofij', 'direccion', 'localidad', 'cod_postal', 'nacionalidad',
+        'nivel_estudios', 'estud_cursa', 'centro_estud', 'idiomas', 'estud_reali', 'centro_estud_reali',
+        'profesion', 'lugar_trabajo'];
+        $this->set(compact('data', '_serialize', '_delimiter', '_extract'));
         $this->viewBuilder()->className('CsvView.Csv');
         return;
     }
